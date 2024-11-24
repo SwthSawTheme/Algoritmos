@@ -1,3 +1,3 @@
 @echo off
-g++ 1008.cpp -o bin\1008
-bin\1008.exe < entrada.txt
+g++ 1009.cpp -o bin\1009
+bin\1009.exe < entrada.txt
