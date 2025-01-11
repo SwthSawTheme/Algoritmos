@@ -1,7 +1,17 @@
+# Raiz quadrada
+def sqrt(num:int):
+    return int(num ** (1/2))
+
+# Retorna o modulo de um número
+def mod(num:int):
+    return int(sqrt(num ** 2))
+
+# Formula do Maior
+
 a, b, c = map(int, input().split())
 
-# Fórmula para encontrar o maior entre dois números
-maior_ab = (a + b + abs(a - b)) // 2
-maior_abc = (maior_ab + c + abs(maior_ab - c)) // 2
+# MaiorAB = (a + b + |a - b|) / 2
+maiorAB = (a + b + mod(a - b)) / 2
+maiorC = int((maiorAB + c + mod( maiorAB - c)) / 2)
 
-print(f"{maior_abc} eh o maior")
+print(f"{maiorC} eh o maior")
