@@ -33,9 +33,26 @@ double raiz_Quadrada(double num) {
     return potencia(num, 0.5);
 }
 
+// Função para calcular o módulo (valor absoluto)
+double mod(double num) {
+    if (num < 0) {
+        return -num;
+    }
+    return num;
+}
+
 int main() {
-    std::cout << "Raiz quadrada de 16: " << raiz_Quadrada(16) << std::endl;
-    std::cout << "Raiz quadrada de 25: " << raiz_Quadrada(25) << std::endl;
-    std::cout << "Raiz quadrada de 2: " << raiz_Quadrada(2) << std::endl;
+    int a, b, c;
+
+    std::cin >> a >> b >> c;
+
+    // Calcula o maior entre a e b
+    double maiorAB = (a + b + mod(a - b)) / 2;
+
+    // Calcula o maior entre maiorAB e c
+    double maiorC = (maiorAB + c + mod(maiorAB - c)) / 2;
+
+    std::cout << (int)maiorC << " eh o maior" << std::endl;
+
     return 0;
 }
