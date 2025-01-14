@@ -1,3 +1,3 @@
 @echo off
-g++ 1021.cpp -o bin\1021
-bin\1021.exe
+g++ 1036.cpp -o bin\1036
+bin\1036.exe
